@@ -17,11 +17,11 @@ module.exports = require('./webpack.base.babel')({
   ],
 
   // Utilize long-term caching by adding content hashes (not compilation hashes) to compiled assets
- output: {
-  path: path.resolve(__dirname, 'public'),  // Output to the 'public' directory
+output: {
+  path: path.resolve(__dirname, 'public'),  // Make sure output goes to 'public'
   filename: '[name].[chunkhash].js',
   chunkFilename: '[name].[chunkhash].chunk.js',
-  publicPath: '/',  // Ensures that the assets are served from the root of the domain
+  publicPath: '/',  // Ensures correct URL path for assets
 },
 
   optimization: {
